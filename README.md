@@ -1,6 +1,6 @@
 # Grav Docker image running on Alpine Linux
 
-[![Docker Layers](https://img.shields.io/badge/docker%20layers-8-blue.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/yobasystems/alpine-grav/) [![Docker Size](https://img.shields.io/badge/docker%20size-48%20MB-blue.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/yobasystems/alpine-grav/) [![Docker Stars](https://img.shields.io/docker/stars/yobasystems/alpine-grav.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/yobasystems/alpine-grav/) [![Docker Pulls](https://img.shields.io/docker/pulls/yobasystems/alpine-grav.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/yobasystems/alpine-grav/)
+[![Docker Layers](https://img.shields.io/badge/docker%20layers-7-blue.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/yobasystems/alpine-grav/) [![Docker Size](https://img.shields.io/badge/docker%20size-43%20MB-blue.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/yobasystems/alpine-grav/) [![Docker Stars](https://img.shields.io/docker/stars/yobasystems/alpine-grav.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/yobasystems/alpine-grav/) [![Docker Pulls](https://img.shields.io/docker/pulls/yobasystems/alpine-grav.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/yobasystems/alpine-grav/)
 
 [![Alpine Version](https://img.shields.io/badge/alpine%20version-v3.5-green.svg?maxAge=2592000?style=flat-square)](http://alpinelinux.org/) [![Grav Version](https://img.shields.io/badge/grav%20version-v1.1.15-green.svg?maxAge=2592000?style=flat-square)](http://getgrav.org/)
 
@@ -10,7 +10,7 @@ This Docker image [(yobasystems/alpine-grav)](https://hub.docker.com/r/yobasyste
 
 ## Features
 
-  * Minimal size only 48 MB and only 8 layers
+  * Minimal size only 43 MB and only 7 layers
   * Memory usage is minimal on a simple install
   * [GRAV](https://getgrav.org/) 1.1.15
   * [PHP](http://pkgs.alpinelinux.org/package/main/x86/php) 7
