@@ -15,7 +15,15 @@ This Docker image [(yobasystems/alpine-grav)](https://hub.docker.com/r/yobasyste
   * [GRAV](https://getgrav.org/) 1.1.15
   * [PHP](http://pkgs.alpinelinux.org/package/main/x86/php) 7
   * [Nginx](http://pkgs.alpinelinux.org/package/main/x86/nginx) 1.10.2
-  * Memory usage is around 55mb on a simple install.
+  * Memory usage is around 55mb on a simple install
+  * Armv7 (armhf) version with ```:armhf``` tag
+
+## Tags
+
+* ```:latest``` latest nginx & alpine
+* ```:master``` master branch usually inline with latest
+* ```:v0.0.0``` version number related to nginx version
+* ```:armhf``` Armv7 based on latest tag but arm architecture
 
 
 ## Creating an instance
