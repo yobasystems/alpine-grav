@@ -1,7 +1,7 @@
 FROM armhf/alpine:3.5
 MAINTAINER Dominic Taylor <dominic@yobasystems.co.uk>
 ENV TERM="xterm" \
-    GRAV_VERSION="1.1.15"
+    GRAV_VERSION="1.3.10"
 
 RUN apk update && \
     apk add bash less vim nginx ca-certificates git tzdata curl yaml zip \

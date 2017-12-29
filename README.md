@@ -2,7 +2,7 @@
 
 [![Docker Layers](https://img.shields.io/badge/docker%20layers-7-blue.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/yobasystems/alpine-grav/) [![Docker Size](https://img.shields.io/badge/docker%20size-43%20MB-blue.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/yobasystems/alpine-grav/) [![Docker Stars](https://img.shields.io/docker/stars/yobasystems/alpine-grav.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/yobasystems/alpine-grav/) [![Docker Pulls](https://img.shields.io/docker/pulls/yobasystems/alpine-grav.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/yobasystems/alpine-grav/)
 
-[![Alpine Version](https://img.shields.io/badge/alpine%20version-v3.5-green.svg?maxAge=2592000?style=flat-square)](http://alpinelinux.org/) [![Grav Version](https://img.shields.io/badge/grav%20version-v1.1.15-green.svg?maxAge=2592000?style=flat-square)](http://getgrav.org/)
+[![Alpine Version](https://img.shields.io/badge/alpine%20version-v3.6.2-green.svg?maxAge=2592000?style=flat-square)](http://alpinelinux.org/) [![Grav Version](https://img.shields.io/badge/grav%20version-v1.3.10-green.svg?maxAge=2592000?style=flat-square)](http://getgrav.org/)
 
 
 
@@ -12,9 +12,9 @@ This Docker image [(yobasystems/alpine-grav)](https://hub.docker.com/r/yobasyste
 
   * Minimal size only 43 MB and only 7 layers
   * Memory usage is minimal on a simple install
-  * [GRAV](https://getgrav.org/) 1.1.15
+  * [GRAV](https://getgrav.org/) 1.3.10
   * [PHP](http://pkgs.alpinelinux.org/package/main/x86/php) 7
-  * [Nginx](http://pkgs.alpinelinux.org/package/main/x86/nginx) 1.10.2
+  * [Nginx](http://pkgs.alpinelinux.org/package/main/x86/nginx)
   * Memory usage is around 55mb on a simple install
   * Armv7 (armhf) version with ```:armhf``` tag
 

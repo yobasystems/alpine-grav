@@ -13,7 +13,7 @@ if [ ! -d /usr/html/system ] ; then
   curl -fLk -o /tmp/grav.zip  "https://getgrav.org/download/skeletons/onepage-site/1.0.2"
   mkdir /tmp/grav-src
   unzip /tmp/grav.zip -d /tmp/grav-src
-  mv -f /tmp/grav-src/grav-admin/* /usr/html/
+  mv -f /tmp/grav-src/grav-skeleton-onepage-site/* /usr/html/
   rm -R /tmp/grav*
   chown -R nginx:nginx /usr/html
 else
