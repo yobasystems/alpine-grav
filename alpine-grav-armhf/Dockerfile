@@ -1,7 +1,7 @@
-FROM armhf/alpine:3.5
-MAINTAINER Dominic Taylor <dominic@yobasystems.co.uk>
+FROM yobasystems/alpine:3.8-armhf
+LABEL maintainer "Dominic Taylor <dominic@yobasystems.co.uk>" architecture="ARM32v7/armhf" architecture="ARM32v7/armhf" version="1.5.1" date="24-aug-2018"
 ENV TERM="xterm" \
-    GRAV_VERSION="1.3.10"
+    GRAV_VERSION="1.5.1"
 
 RUN apk update && \
     apk add bash less vim nginx ca-certificates git tzdata curl yaml zip \
@@ -15,7 +15,6 @@ RUN sed -i 's/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/g' /etc/php7/php.ini && \
     sed -i 's/expose_php = On/expose_php = Off/g' /etc/php7/php.ini && \
     sed -i "s/nginx:x:100:101:nginx:\/var\/lib\/nginx:\/sbin\/nologin/nginx:x:100:101:nginx:\/usr:\/bin\/bash/g" /etc/passwd && \
     sed -i "s/nginx:x:100:101:nginx:\/var\/lib\/nginx:\/sbin\/nologin/nginx:x:100:101:nginx:\/usr:\/bin\/bash/g" /etc/passwd- && \
-    ln -s /usr/bin/php7 /usr/bin/php && \
     ln -s /sbin/php-fpm7 /sbin/php-fpm
 
 ADD files/nginx.conf /etc/nginx/
