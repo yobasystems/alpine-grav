@@ -23,6 +23,19 @@ ADD files/run.sh /
 RUN chmod +x /run.sh
 
 
+RUN mkdir -p /usr/html && \
+    curl -fLk -o /tmp/grav.zip  "https://github.com/getgrav/grav/releases/download/$GRAV_VERSION/grav-admin-v$GRAV_VERSION.zip" && \
+  mkdir /tmp/grav-src && \
+  unzip /tmp/grav.zip -d /tmp/grav-src && \
+  mv -f /tmp/grav-src/grav-admin/* /usr/html/ && \
+  rm -R /tmp/grav* && \
+  chown -R nginx:nginx /usr/html  && \
+  find /usr/html -type f | xargs chmod 664 && \
+  find /usr/html -type d | xargs chmod 755 && \
+  find /usr/html -type d | xargs chmod +s
+  
+
+
 EXPOSE 80
-VOLUME ["/usr"]
+VOLUME ["/usr/html/user"]
 CMD ["/run.sh"]
