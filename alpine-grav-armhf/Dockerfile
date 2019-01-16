@@ -1,7 +1,9 @@
-FROM yobasystems/alpine:3.8.1-armhf
-LABEL maintainer "Dominic Taylor <dominic@yobasystems.co.uk>" architecture="ARM32v7/armhf" architecture="ARM32v7/armhf" version="1.5.3" date="02-nov-2018"
+FROM balenalib/armv7hf-alpine
+LABEL MAINTAINER fabrizio2210  architecture="ARM32v7/armhf" version="1.5.3" date="16-Gen-2019"
 ENV TERM="xterm" \
     GRAV_VERSION="1.5.3"
+
+RUN [ "cross-build-start" ]
 
 RUN apk update && \
     apk add bash less vim nginx ca-certificates git tzdata curl yaml zip \
@@ -35,6 +37,7 @@ RUN mkdir -p /usr/html && \
   find /usr/html -type d | xargs chmod +s
   
 
+RUN [ "cross-build-end" ]
 
 EXPOSE 80
 VOLUME ["/usr/html/user"]
