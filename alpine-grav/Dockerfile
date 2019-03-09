@@ -1,5 +1,5 @@
 FROM yobasystems/alpine:3.8.1-amd64
-LABEL maintainer "Dominic Taylor <dominic@yobasystems.co.uk>" architecture="AMD64/x86_64" architecture="AMD64/x86_64" version="1.5.3" date="02-nov-2018"
+LABEL maintainer "fabrizio2210" architecture="AMD64/x86_64" architecture="AMD64/x86_64" version="1.5.3" date="02-nov-2018"
 ENV TERM="xterm" \
     GRAV_VERSION="1.5.3"
 
@@ -22,7 +22,17 @@ ADD files/php-fpm.conf /etc/php7/
 ADD files/run.sh /
 RUN chmod +x /run.sh
 
+RUN mkdir -p /usr/html && \
+    curl -fLk -o /tmp/grav.zip  "https://github.com/getgrav/grav/releases/download/$GRAV_VERSION/grav-admin-v$GRAV_VERSION.zip" && \
+  mkdir /tmp/grav-src && \
+  unzip /tmp/grav.zip -d /tmp/grav-src && \
+  mv -f /tmp/grav-src/grav-admin/* /usr/html/ && \
+  rm -R /tmp/grav* && \
+  chown -R nginx:nginx /usr/html  && \
+  find /usr/html -type f | xargs chmod 664 && \
+  find /usr/html -type d | xargs chmod 755 && \
+  find /usr/html -type d | xargs chmod +s
 
 EXPOSE 80
-VOLUME ["/usr"]
+VOLUME ["/usr/html/user"]
 CMD ["/run.sh"]
