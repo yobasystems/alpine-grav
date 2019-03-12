@@ -1,7 +1,25 @@
-FROM yobasystems/alpine:3.8.1-amd64
-LABEL maintainer "Dominic Taylor <dominic@yobasystems.co.uk>" architecture="AMD64/x86_64" architecture="AMD64/x86_64" version="1.5.3" date="02-nov-2018"
+FROM yobasystems/alpine:3.9.0-aarch64
+
+ARG BUILD_DATE
+ARG VCS_REF
+
+LABEL maintainer="Dominic Taylor <dominic@yobasystems.co.uk>" \
+    architecture="arm64v8/aarch64" \
+    grav-version="1.5.8" \
+    alpine-version="3.9.0" \
+    build="12-Mar-2019" \
+    org.opencontainers.image.title="alpine-grav" \
+    org.opencontainers.image.description="Grav Docker image running on Alpine Linux" \
+    org.opencontainers.image.authors="Dominic Taylor <dominic@yobasystems.co.uk>" \
+    org.opencontainers.image.vendor="Yoba Systems" \
+    org.opencontainers.image.version="v1.5.8" \
+    org.opencontainers.image.url="https://hub.docker.com/r/yobasystems/alpine-grav/" \
+    org.opencontainers.image.source="https://github.com/yobasystems/alpine-grav" \
+    org.opencontainers.image.revision=$VCS_REF \
+    org.opencontainers.image.created=$BUILD_DATE
+
 ENV TERM="xterm" \
-    GRAV_VERSION="1.5.3"
+    GRAV_VERSION="1.5.8"
 
 RUN apk update && \
     apk add bash less vim nginx ca-certificates git tzdata curl yaml zip \

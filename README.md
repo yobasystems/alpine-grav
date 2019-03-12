@@ -1,29 +1,49 @@
 # Grav Docker image running on Alpine Linux
 
-[![Docker Layers](https://img.shields.io/badge/docker%20layers-7-blue.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/yobasystems/alpine-grav/) [![Docker Size](https://img.shields.io/badge/docker%20size-43%20MB-blue.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/yobasystems/alpine-grav/) [![Docker Stars](https://img.shields.io/docker/stars/yobasystems/alpine-grav.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/yobasystems/alpine-grav/) [![Docker Pulls](https://img.shields.io/docker/pulls/yobasystems/alpine-grav.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/yobasystems/alpine-grav/)
+[![Docker Automated build](https://img.shields.io/docker/automated/yobasystems/alpine-grav.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/r/yobasystems/alpine-grav/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/yobasystems/alpine-grav.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/r/yobasystems/alpine-grav/)
+[![Docker Stars](https://img.shields.io/docker/stars/yobasystems/alpine-grav.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/r/yobasystems/alpine-grav/)
 
-[![Alpine Version](https://img.shields.io/badge/alpine%20version-v3.8.1-green.svg?maxAge=2592000?style=flat-square)](http://alpinelinux.org/) [![Grav Version](https://img.shields.io/badge/grav%20version-v1.5.3-green.svg?maxAge=2592000?style=flat-square)](http://getgrav.org/)
+[![Alpine Version](https://img.shields.io/badge/Alpine%20version-v3.9.0-green.svg?style=for-the-badge)](https://alpinelinux.org/)
+[![Grav Version](https://img.shields.io/badge/grav%20version-v1.5.8-green.svg?maxAge=2592000?style=flat-square)](https://getgrav.org/)
 
 
-
-This Docker image [(yobasystems/alpine-grav)](https://hub.docker.com/r/yobasystems/alpine-grav/) is based on the minimal [Alpine Linux](http://alpinelinux.org/) ready for running [Grav](https://getgrav.org/). (Flat file CMS)
+This Docker image [(yobasystems/alpine-grav)](https://hub.docker.com/r/yobasystems/alpine-grav/) is based on the minimal [Alpine Linux](https://alpinelinux.org/) ready for running [Grav](https://getgrav.org/) (Flat file CMS)
 
 ## Features
 
-  * Minimal size only 43 MB and only 7 layers
-  * Memory usage is minimal on a simple install
-  * [GRAV](https://getgrav.org/) 1.5.3
-  * [PHP](http://pkgs.alpinelinux.org/package/main/x86/php) 7
-  * [Nginx](http://pkgs.alpinelinux.org/package/main/x86/nginx)
-  * Memory usage is around 55mb on a simple install
-  * Armv7 (armhf) version with ```:armhf``` tag
+* Minimal size only 43 MB and only 7 layers
+* Memory usage is minimal on a simple install
+
+## Architectures
+
+* ```:amd64```, ```:x86_64``` - 64 bit Intel/AMD (x86_64/amd64)
+* ```:arm64v8```, ```:aarch64``` - 64 bit ARM (ARMv8/aarch64)
+* ```:arm32v7```, ```:armhf``` - 32 bit ARM (ARMv7/armhf)
+
+##### PLEASE CHECK TAGS BELOW FOR SUPPORTED ARCHITECTURES, THE ABOVE IS A LIST OF EXPLANATION
 
 ## Tags
 
-* ```:latest``` latest nginx & alpine
+* ```:latest``` latest branch based (Automatic Architecture Selection)
 * ```:master``` master branch usually inline with latest
-* ```:v0.0.0``` version number related to nginx version
-* ```:armhf``` Armv7 based on latest tag but arm architecture
+* ```:amd64```, ```:x86_64```  amd64 based on latest tag but amd64 architecture
+* ```:aarch64```, ```:arm64v8``` Armv8 based on latest tag but arm64 architecture
+* ```:armhf```, ```:arm32v7``` Armv7 based on latest tag but arm32 architecture
+
+## Layers & Sizes
+
+![Version](https://img.shields.io/badge/version-amd64-blue.svg?style=for-the-badge)
+![MicroBadger Layers (tag)](https://img.shields.io/microbadger/layers/yobasystems/alpine-grav/amd64.svg?style=for-the-badge)
+![MicroBadger Size (tag)](https://img.shields.io/microbadger/image-size/yobasystems/alpine-grav/amd64.svg?style=for-the-badge)
+
+![Version](https://img.shields.io/badge/version-aarch64-blue.svg?style=for-the-badge)
+![MicroBadger Layers (tag)](https://img.shields.io/microbadger/layers/yobasystems/alpine-grav/aarch64.svg?style=for-the-badge)
+![MicroBadger Size (tag)](https://img.shields.io/microbadger/image-size/yobasystems/alpine-grav/aarch64.svg?style=for-the-badge)
+
+![Version](https://img.shields.io/badge/version-armhf-blue.svg?style=for-the-badge)
+![MicroBadger Layers (tag)](https://img.shields.io/microbadger/layers/yobasystems/alpine-grav/armhf.svg?style=for-the-badge)
+![MicroBadger Size (tag)](https://img.shields.io/microbadger/image-size/yobasystems/alpine-grav/armhf.svg?style=for-the-badge)
 
 
 ## Creating an instance
@@ -75,7 +95,6 @@ Group ID:
 ```bash
 chown -R 100:101 /data/{domain}/html
 ```
-
 
 
 ### Volume structure

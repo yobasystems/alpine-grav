@@ -1,10 +1,10 @@
-FROM yobasystems/alpine:3.9.0-armhf
+FROM yobasystems/alpine:3.9.0-amd64
 
 ARG BUILD_DATE
 ARG VCS_REF
 
 LABEL maintainer="Dominic Taylor <dominic@yobasystems.co.uk>" \
-    architecture="arm32v7/armhf" \
+    architecture="amd64/x86_64" \
     grav-version="1.5.8" \
     alpine-version="3.9.0" \
     build="12-Mar-2019" \
@@ -17,7 +17,7 @@ LABEL maintainer="Dominic Taylor <dominic@yobasystems.co.uk>" \
     org.opencontainers.image.source="https://github.com/yobasystems/alpine-grav" \
     org.opencontainers.image.revision=$VCS_REF \
     org.opencontainers.image.created=$BUILD_DATE
-
+    
 ENV TERM="xterm" \
     GRAV_VERSION="1.5.8"
 
