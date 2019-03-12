@@ -27,6 +27,8 @@ This Docker image [(yobasystems/alpine-grav)](https://hub.docker.com/r/yobasyste
 
 * ```:latest``` latest branch based (Automatic Architecture Selection)
 * ```:master``` master branch usually inline with latest
+* ```:deliver-site``` deliver-site branch based (Automatic Architecture Selection)
+* ```:one-page``` one-page branch based (Automatic Architecture Selection)
 * ```:amd64```, ```:x86_64```  amd64 based on latest tag but amd64 architecture
 * ```:aarch64```, ```:arm64v8``` Armv8 based on latest tag but arm64 architecture
 * ```:armhf```, ```:arm32v7``` Armv7 based on latest tag but arm32 architecture
