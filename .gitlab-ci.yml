@@ -175,7 +175,7 @@ arm32v7 grav one-page build:
     - echo "$QUAY_PASSWORD" | docker login -u "$QUAY_USERNAME" quay.io --password-stdin && docker push $DOCKER_REGISTRY_QUAY/$DOCKER_REGISTRY_QUAY_REPO:one-page-arm32v7
     - echo "$QUAY_PASSWORD" | docker login -u "$QUAY_USERNAME" quay.io --password-stdin && docker push $DOCKER_REGISTRY_QUAY/$DOCKER_REGISTRY_QUAY_REPO:one-page-armhf
 
-arm64v8 grav deliver build:
+arm64v8 grav one-page build:
   image: yobasystems/alpine-docker:aarch64-dind
   stage: build
   tags:
