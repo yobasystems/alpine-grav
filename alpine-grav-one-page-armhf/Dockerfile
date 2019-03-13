@@ -1,4 +1,4 @@
-FROM yobasystems/alpine:3.9.0-armhf
+FROM yobasystems/alpine:3.9.2-armhf
 
 ARG BUILD_DATE
 ARG VCS_REF
@@ -6,8 +6,8 @@ ARG VCS_REF
 LABEL maintainer="Dominic Taylor <dominic@yobasystems.co.uk>" \
     architecture="arm32v7/armhf" \
     grav-version="1.5.8" \
-    alpine-version="3.9.0" \
-    build="12-Mar-2019" \
+    alpine-version="3.9.2" \
+    build="13-Mar-2019" \
     org.opencontainers.image.title="alpine-grav" \
     org.opencontainers.image.description="Grav Docker image running on Alpine Linux" \
     org.opencontainers.image.authors="Dominic Taylor <dominic@yobasystems.co.uk>" \

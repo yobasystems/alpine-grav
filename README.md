@@ -4,7 +4,7 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/yobasystems/alpine-grav.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/r/yobasystems/alpine-grav/)
 [![Docker Stars](https://img.shields.io/docker/stars/yobasystems/alpine-grav.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/r/yobasystems/alpine-grav/)
 
-[![Alpine Version](https://img.shields.io/badge/Alpine%20version-v3.9.0-green.svg?style=for-the-badge)](https://alpinelinux.org/)
+[![Alpine Version](https://img.shields.io/badge/Alpine%20version-v3.9.2-green.svg?style=for-the-badge)](https://alpinelinux.org/)
 [![Grav Version](https://img.shields.io/badge/grav%20version-v1.5.8-green.svg?style=for-the-badge)](https://getgrav.org/)
 
 
