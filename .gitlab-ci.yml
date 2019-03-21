@@ -5,7 +5,7 @@ stages:
   - deploy
 
 amd64 grav build:
-  image: yobasystems/alpine-docker:amd64-dind
+  image: yobasystems/alpine-docker:dind
   stage: build
   tags:
     - amd64
@@ -27,7 +27,7 @@ amd64 grav build:
     - docker push ${CI_APPLICATION_REPOSITORY}:${CI_APPLICATION_TAG}
 
 arm32v7 grav build:
-  image: yobasystems/alpine-docker:armhf-dind
+  image: yobasystems/alpine-docker:dind
   stage: build
   tags:
     - armhf
@@ -48,7 +48,7 @@ arm32v7 grav build:
     - echo "$QUAY_PASSWORD" | docker login -u "$QUAY_USERNAME" quay.io --password-stdin && docker push $DOCKER_REGISTRY_QUAY/$DOCKER_REGISTRY_QUAY_REPO:armhf
 
 arm64v8 grav build:
-  image: yobasystems/alpine-docker:aarch64-dind
+  image: yobasystems/alpine-docker:dind
   stage: build
   tags:
     - aarch64
@@ -69,7 +69,7 @@ arm64v8 grav build:
     - echo "$QUAY_PASSWORD" | docker login -u "$QUAY_USERNAME" quay.io --password-stdin && docker push $DOCKER_REGISTRY_QUAY/$DOCKER_REGISTRY_QUAY_REPO:aarch64
 
 amd64 grav deliver build:
-  image: yobasystems/alpine-docker:amd64-dind
+  image: yobasystems/alpine-docker:dind
   stage: build
   tags:
     - amd64
@@ -91,7 +91,7 @@ amd64 grav deliver build:
     - docker push ${CI_APPLICATION_REPOSITORY}:${CI_APPLICATION_TAG}
 
 arm32v7 grav deliver build:
-  image: yobasystems/alpine-docker:armhf-dind
+  image: yobasystems/alpine-docker:dind
   stage: build
   tags:
     - armhf
@@ -112,7 +112,7 @@ arm32v7 grav deliver build:
     - echo "$QUAY_PASSWORD" | docker login -u "$QUAY_USERNAME" quay.io --password-stdin && docker push $DOCKER_REGISTRY_QUAY/$DOCKER_REGISTRY_QUAY_REPO:deliver-site-armhf
 
 arm64v8 grav deliver build:
-  image: yobasystems/alpine-docker:aarch64-dind
+  image: yobasystems/alpine-docker:dind
   stage: build
   tags:
     - aarch64
@@ -133,7 +133,7 @@ arm64v8 grav deliver build:
     - echo "$QUAY_PASSWORD" | docker login -u "$QUAY_USERNAME" quay.io --password-stdin && docker push $DOCKER_REGISTRY_QUAY/$DOCKER_REGISTRY_QUAY_REPO:deliver-site-aarch64
 
 amd64 grav one-page build:
-  image: yobasystems/alpine-docker:amd64-dind
+  image: yobasystems/alpine-docker:dind
   stage: build
   tags:
     - amd64
@@ -155,7 +155,7 @@ amd64 grav one-page build:
     - docker push ${CI_APPLICATION_REPOSITORY}:${CI_APPLICATION_TAG}
 
 arm32v7 grav one-page build:
-  image: yobasystems/alpine-docker:armhf-dind
+  image: yobasystems/alpine-docker:dind
   stage: build
   tags:
     - armhf
@@ -176,7 +176,7 @@ arm32v7 grav one-page build:
     - echo "$QUAY_PASSWORD" | docker login -u "$QUAY_USERNAME" quay.io --password-stdin && docker push $DOCKER_REGISTRY_QUAY/$DOCKER_REGISTRY_QUAY_REPO:one-page-armhf
 
 arm64v8 grav one-page build:
-  image: yobasystems/alpine-docker:aarch64-dind
+  image: yobasystems/alpine-docker:dind
   stage: build
   tags:
     - aarch64
@@ -208,7 +208,7 @@ container_scanning:
     CLAIR_HOST: $CLAIR_URL
   allow_failure: true
   services:
-    - yobasystems/alpine-docker:amd64-dind
+    - yobasystems/alpine-docker:dind
   script:
     - apk add -U wget ca-certificates
     - echo "$CI_JOB_TOKEN" | docker login -u gitlab-ci-token "$DOCKER_REGISTRY" --password-stdin
@@ -223,7 +223,7 @@ container_scanning:
       container_scanning: gl-container-scanning-report.json
 
 gitlab manifest creation:
-  stage: yobasystems/alpine-docker:amd64-dind
+  stage: yobasystems/alpine-docker:dind
   stage: manifest
   tags:
     - amd64
@@ -241,7 +241,7 @@ gitlab manifest creation:
     - docker manifest push $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:latest
 
 dockerhub manifest creation:
-  stage: yobasystems/alpine-docker:amd64-dind
+  stage: yobasystems/alpine-docker:dind
   stage: manifest
   tags:
     - amd64
@@ -259,7 +259,7 @@ dockerhub manifest creation:
     - docker manifest push $DOCKER_REGISTRY_DOCKERHUB_REPO:latest
 
 gitlab deliver-site manifest creation:
-  stage: yobasystems/alpine-docker:amd64-dind
+  stage: yobasystems/alpine-docker:dind
   stage: manifest
   tags:
     - amd64
@@ -277,7 +277,7 @@ gitlab deliver-site manifest creation:
     - docker manifest push $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:deliver-site
 
 dockerhub deliver-site manifest creation:
-  stage: yobasystems/alpine-docker:amd64-dind
+  stage: yobasystems/alpine-docker:dind
   stage: manifest
   tags:
     - amd64
@@ -295,7 +295,7 @@ dockerhub deliver-site manifest creation:
     - docker manifest push $DOCKER_REGISTRY_DOCKERHUB_REPO:deliver-site
 
 gitlab one-page manifest creation:
-  stage: yobasystems/alpine-docker:amd64-dind
+  stage: yobasystems/alpine-docker:dind
   stage: manifest
   tags:
     - amd64
@@ -313,7 +313,7 @@ gitlab one-page manifest creation:
     - docker manifest push $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:one-page
 
 dockerhub one-page manifest creation:
-  stage: yobasystems/alpine-docker:amd64-dind
+  stage: yobasystems/alpine-docker:dind
   stage: manifest
   tags:
     - amd64
