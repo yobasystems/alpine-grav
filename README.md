@@ -11,7 +11,7 @@
 This Docker image [(yobasystems/alpine-grav)](https://hub.docker.com/r/yobasystems/alpine-grav/) is based on the minimal [Alpine Linux](https://alpinelinux.org/) ready for running [Grav](https://getgrav.org/) (Flat file CMS)
 
 ##### Alpine Version 3.9.2 (Released March 04, 2019)
-##### MariaDB Version 10.3.13
+##### Grav Version 1.5.9
 
 ----
 
