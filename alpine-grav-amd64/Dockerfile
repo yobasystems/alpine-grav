@@ -5,21 +5,21 @@ ARG VCS_REF
 
 LABEL maintainer="Dominic Taylor <dominic@yobasystems.co.uk>" \
     architecture="amd64/x86_64" \
-    grav-version="1.5.9" \
+    grav-version="1.6.5" \
     alpine-version="3.9.2" \
-    build="21-Mar-2019" \
+    build="16-Apr-2019" \
     org.opencontainers.image.title="alpine-grav" \
     org.opencontainers.image.description="Grav Docker image running on Alpine Linux" \
     org.opencontainers.image.authors="Dominic Taylor <dominic@yobasystems.co.uk>" \
     org.opencontainers.image.vendor="Yoba Systems" \
-    org.opencontainers.image.version="v1.5.9" \
+    org.opencontainers.image.version="v1.6.5" \
     org.opencontainers.image.url="https://hub.docker.com/r/yobasystems/alpine-grav/" \
     org.opencontainers.image.source="https://github.com/yobasystems/alpine-grav" \
     org.opencontainers.image.revision=$VCS_REF \
     org.opencontainers.image.created=$BUILD_DATE
 
 ENV TERM="xterm" \
-    GRAV_VERSION="1.5.9"
+    GRAV_VERSION="1.6.5"
 
 RUN apk update && \
     apk add bash less vim nginx ca-certificates git tzdata curl yaml zip \
