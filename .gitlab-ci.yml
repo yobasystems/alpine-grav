@@ -200,7 +200,7 @@ arm64v8 grav one-page build:
     - echo "$QUAY_PASSWORD" | docker login -u "$QUAY_USERNAME" quay.io --password-stdin && docker push $DOCKER_REGISTRY_QUAY/$DOCKER_REGISTRY_QUAY_REPO:one-page-aarch64
 
 gitlab manifest creation:
-  stage: yobasystems/alpine-docker:dind
+  image: yobasystems/alpine-docker:dind
   stage: manifest
   tags:
     - amd64
@@ -218,7 +218,7 @@ gitlab manifest creation:
     - docker manifest push $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:latest
 
 dockerhub manifest creation:
-  stage: yobasystems/alpine-docker:dind
+  image: yobasystems/alpine-docker:dind
   stage: manifest
   tags:
     - amd64
@@ -236,7 +236,7 @@ dockerhub manifest creation:
     - docker manifest push $DOCKER_REGISTRY_DOCKERHUB_REPO:latest
 
 gitlab deliver-site manifest creation:
-  stage: yobasystems/alpine-docker:dind
+  image: yobasystems/alpine-docker:dind
   stage: manifest
   tags:
     - amd64
@@ -254,7 +254,7 @@ gitlab deliver-site manifest creation:
     - docker manifest push $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:deliver-site
 
 dockerhub deliver-site manifest creation:
-  stage: yobasystems/alpine-docker:dind
+  image: yobasystems/alpine-docker:dind
   stage: manifest
   tags:
     - amd64
@@ -272,7 +272,7 @@ dockerhub deliver-site manifest creation:
     - docker manifest push $DOCKER_REGISTRY_DOCKERHUB_REPO:deliver-site
 
 gitlab one-page manifest creation:
-  stage: yobasystems/alpine-docker:dind
+  image: yobasystems/alpine-docker:dind
   stage: manifest
   tags:
     - amd64
@@ -290,7 +290,7 @@ gitlab one-page manifest creation:
     - docker manifest push $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:one-page
 
 dockerhub one-page manifest creation:
-  stage: yobasystems/alpine-docker:dind
+  image: yobasystems/alpine-docker:dind
   stage: manifest
   tags:
     - amd64
