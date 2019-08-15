@@ -1,25 +1,25 @@
-FROM yobasystems/alpine:3.9.4-armhf
+FROM yobasystems/alpine:3.10.1-armhf
 
 ARG BUILD_DATE
 ARG VCS_REF
 
 LABEL maintainer="Dominic Taylor <dominic@yobasystems.co.uk>" \
     architecture="arm32v7/armhf" \
-    grav-version="1.6.9" \
-    alpine-version="3.9.4" \
-    build="24-May-2019" \
+    grav-version="1.6.12" \
+    alpine-version="3.10.1" \
+    build="15-Aug-2019" \
     org.opencontainers.image.title="alpine-grav" \
     org.opencontainers.image.description="Grav Docker image running on Alpine Linux" \
     org.opencontainers.image.authors="Dominic Taylor <dominic@yobasystems.co.uk>" \
     org.opencontainers.image.vendor="Yoba Systems" \
-    org.opencontainers.image.version="v1.6.9" \
+    org.opencontainers.image.version="v1.6.12" \
     org.opencontainers.image.url="https://hub.docker.com/r/yobasystems/alpine-grav/" \
     org.opencontainers.image.source="https://github.com/yobasystems/alpine-grav" \
     org.opencontainers.image.revision=$VCS_REF \
     org.opencontainers.image.created=$BUILD_DATE
 
 ENV TERM="xterm" \
-    GRAV_VERSION="1.6.9"
+    GRAV_VERSION="1.6.12"
 
 RUN apk update && \
     apk add bash less vim nginx ca-certificates git tzdata curl yaml zip \
