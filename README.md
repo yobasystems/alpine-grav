@@ -1,34 +1,53 @@
-# Grav Docker image running on Alpine Linux
+# Grav container image running on Alpine Linux
 
 [![Docker Automated build](https://img.shields.io/docker/automated/yobasystems/alpine-grav.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/r/yobasystems/alpine-grav/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/yobasystems/alpine-grav.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/r/yobasystems/alpine-grav/)
 [![Docker Stars](https://img.shields.io/docker/stars/yobasystems/alpine-grav.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/r/yobasystems/alpine-grav/)
 
-[![Alpine Version](https://img.shields.io/badge/Alpine%20version-v3.10.1-green.svg?style=for-the-badge)](https://alpinelinux.org/)
-[![Grav Version](https://img.shields.io/badge/grav%20version-v1.6.14-green.svg?style=for-the-badge)](https://getgrav.org/)
+[![Alpine Version](https://img.shields.io/badge/Alpine%20version-v3.19.0-green.svg?style=for-the-badge)](https://alpinelinux.org/)
+[![Grav Version](https://img.shields.io/badge/grav%20version-v1.7.44-green.svg?style=for-the-badge)](https://getgrav.org/)
 
 
-This Docker image [(yobasystems/alpine-grav)](https://hub.docker.com/r/yobasystems/alpine-grav/) is based on the minimal [Alpine Linux](https://alpinelinux.org/) ready for running [Grav](https://getgrav.org/) (Flat file CMS)
+This container image [(yobasystems/alpine-grav)](https://hub.docker.com/r/yobasystems/alpine-grav/) is based on the minimal [Alpine Linux](https://alpinelinux.org/) ready for running [Grav](https://getgrav.org/) (Flat file CMS)
 
-##### Alpine Version 3.10.1 (Released July 11, 2019)
-##### Grav Version 1.6.14
+### Alpine Version 3.19.0 (Released 2023-12-07)
+##### Grav Version 1.7.44
 
 ----
 
-## Features
+## Table of Contents
 
-* Minimal size only 43 MB and only 7 layers
-* Memory usage is minimal on a simple install
+- [What is Alpine Linux?](#what-is-alpine-linux)
+- [Features](#features)
+- [Architectures](#architectures)
+- [Tags](#tags)
+- [Layers & Sizes](#layers--sizes)
+- [How to use this image](#how-to-use-this-image)
+- [Image contents & Vulnerability analysis](#image-contents--vulnerability-analysis)
+- [Source Repositories](#source-repositories)
+- [Container Registries](#container-registries)
+- [Links](#links)
+- [Donation](#donation)
 
-## Architectures
+
+## 🏔️ What is Alpine Linux?
+Alpine Linux is a Linux distribution built around musl libc and BusyBox. The image is only 5 MB in size and has access to a package repository that is much more complete than other BusyBox based images. This makes Alpine Linux a great image base for utilities and even production applications. Read more about Alpine Linux here and you can see how their mantra fits in right at home with container images.
+
+## ✨ Features
+
+* Minimal size only, minimal layers
+* Memory usage is minimal on a simple install.
+
+
+## 🏗️ Architectures
 
 * ```:amd64```, ```:x86_64``` - 64 bit Intel/AMD (x86_64/amd64)
 * ```:arm64v8```, ```:aarch64``` - 64 bit ARM (ARMv8/aarch64)
 * ```:arm32v7```, ```:armhf``` - 32 bit ARM (ARMv7/armhf)
 
-##### PLEASE CHECK TAGS BELOW FOR SUPPORTED ARCHITECTURES, THE ABOVE IS A LIST OF EXPLANATION
+#### 📝 PLEASE CHECK TAGS BELOW FOR SUPPORTED ARCHITECTURES, THE ABOVE IS A LIST OF EXPLANATION
 
-## Tags
+## 🏷️ Tags
 
 * ```:latest``` latest branch based (Automatic Architecture Selection)
 * ```:master``` master branch usually inline with latest
@@ -38,32 +57,38 @@ This Docker image [(yobasystems/alpine-grav)](https://hub.docker.com/r/yobasyste
 * ```:aarch64```, ```:arm64v8``` Armv8 based on latest tag but arm64 architecture
 * ```:armhf```, ```:arm32v7``` Armv7 based on latest tag but arm32 architecture
 
-## Layers & Sizes
+## 📏 Layers & Sizes
 
 ![Version](https://img.shields.io/badge/version-amd64-blue.svg?style=for-the-badge)
-![MicroBadger Layers (tag)](https://img.shields.io/microbadger/layers/yobasystems/alpine-grav/amd64.svg?style=for-the-badge)
-![MicroBadger Size (tag)](https://img.shields.io/microbadger/image-size/yobasystems/alpine-grav/amd64.svg?style=for-the-badge)
+![MicroBadger Layers (tag)](https://img.shields.io/docker/layers/yobasystems/alpine-grav/amd64.svg?style=for-the-badge)
+![MicroBadger Size (tag)](https://img.shields.io/docker/image-size/yobasystems/alpine-grav/amd64.svg?style=for-the-badge)
 
 ![Version](https://img.shields.io/badge/version-aarch64-blue.svg?style=for-the-badge)
-![MicroBadger Layers (tag)](https://img.shields.io/microbadger/layers/yobasystems/alpine-grav/aarch64.svg?style=for-the-badge)
-![MicroBadger Size (tag)](https://img.shields.io/microbadger/image-size/yobasystems/alpine-grav/aarch64.svg?style=for-the-badge)
+![MicroBadger Layers (tag)](https://img.shields.io/docker/layers/yobasystems/alpine-grav/aarch64.svg?style=for-the-badge)
+![MicroBadger Size (tag)](https://img.shields.io/docker/image-size/yobasystems/alpine-grav/aarch64.svg?style=for-the-badge)
 
 ![Version](https://img.shields.io/badge/version-armhf-blue.svg?style=for-the-badge)
-![MicroBadger Layers (tag)](https://img.shields.io/microbadger/layers/yobasystems/alpine-grav/armhf.svg?style=for-the-badge)
-![MicroBadger Size (tag)](https://img.shields.io/microbadger/image-size/yobasystems/alpine-grav/armhf.svg?style=for-the-badge)
+![MicroBadger Layers (tag)](https://img.shields.io/docker/layers/yobasystems/alpine-grav/armhf.svg?style=for-the-badge)
+![MicroBadger Size (tag)](https://img.shields.io/docker/image-size/yobasystems/alpine-grav/armhf.svg?style=for-the-badge)
 
+## 🚀 How to use this image
+## Environment Variables:
 
 ## Creating an instance
 
-    mkdir -p /data/{domain}/html
+```bash
+mkdir -p /data/{domain}/html
 
-    docker run -e VIRTUAL_HOST={domain}.com,www.{domain}.com -v /data/{domain}/html:/usr/html -p 80:80 yobasystems/alpine-grav
+docker run -e VIRTUAL_HOST={domain}.com,www.{domain}.com -v /data/{domain}/html:/usr/html -p 80:80 yobasystems/alpine-grav
+```
 
-    E.G
+E.G
 
-    mkdir -p /data/yobasystems/html
+```bash
+mkdir -p /data/yobasystems/html
 
-    docker run -e VIRTUAL_HOST=www.yobasystems.co.uk -v /data/yobasystems/html:/usr/html -p 80:80 yobasystems/alpine-grav
+docker run -e VIRTUAL_HOST=www.yobasystems.co.uk -v /data/yobasystems/html:/usr/html -p 80:80 yobasystems/alpine-grav
+```
 
 Make sure you create the folder on the host before starting the container and obtain the correct permissions.
 
@@ -78,8 +103,8 @@ E.G
 mkdir -p /data/yobasystems/html
 
 docker run -e VIRTUAL_HOST=www.yobasystems.co.uk -v /data/yobasystems/html:/usr/html -p 80:80 yobasystems/alpine-grav
-
 ```
+
 The following user and group id are used, the files should be set to this:
 User ID:
 Group ID:
@@ -92,7 +117,7 @@ E.G
 chown -R 100:101 /data/yobasystems/html
 ```
 
-The docker image will auto create the folder and populate with files if it doesn't exist. Make sure to mount /data/{domain}/html with your Backup files.
+The container image will auto create the folder and populate with files if it doesn't exist. Make sure to mount /data/{domain}/html with your Backup files.
 
 
 The following user and group id are used, the files should be set to this:
@@ -113,7 +138,7 @@ chown -R 100:101 /data/{domain}/html
 
 Grav includes a GPM (Grav Package Manager) which allows you to install, update, uninstall and list all the themes and plugins available on the Grav repository, as well as upgrade Grav itself to the latest version. Its best to `su nginx` before executing anything or else you can potentially compromise your host.
 
-```
+```bash
 docker exec -it <container_name> bash
 su nginx
 cd /usr/html
@@ -130,88 +155,88 @@ modify files/php-fpm.conf
 
 To modify php.ini variable, simply edit php-fpm.ini and add php_flag[variable] = value.
 
-```
+```php
 php_flag[display_errors] = on
 ```
 
 ### PHP Modules
 #### List of available modules in Alpine Linux, not all these are installed.
-##### In order to install a php module do, (leave out the version number i.e. -5.6.11-r0
-```
+##### In order to install a php module do, (leave out the version number i.e. -8.1.01-r0
+```bash
 docker exec <image_id> apk add <pkg_name>
 docker restart <image_name>
 ```
 Example:
 
-```
-docker exec <image_id> apk add php7-soap
+```bash
+docker exec <image_id> apk add php81-soap
 docker restart <image_name>
 ```
 
 ```
-php7-common
-php7-pdo_sqlite
-php7-pear
-php7-ftp
-php7-imap
-php7-mysqli
-php7-json
-php7-mbstring
-php7-soap
-php7-litespeed
-php7-sockets
-php7-bcmath
-php7-opcache
-php7-dom
-php7-zlib
-php7-gettext
-php7-fpm
-php7-intl
-php7-openssl
-php7-session
-php7-mcrypt
-php7-pdo_mysql
-php7-embed
-php7-xmlrpc
-php7-wddx
-php7-dba
-php7-ldap
-php7-xsl
-php7-exif
-php7-pdo_dblib
-php7-bz2
-php7-pdo
-php7-pspell
-php7-sysvmsg
-php7-gmp
-php7-apache2
-php7-pdo_odbc
-php7-shmop
-php7-ctype
-php7-phpdbg
-php7-enchant
-php7-sysvsem
-php7-sqlite3
-php7-odbc
-php7-pcntl
-php7-calendar
-php7-xmlreader
-php7-snmp
-php7-zip
-php7-posix
-php7-iconv
-php7-curl
-php7-doc
-php7-gd
-php7-xml
-php7-dev
-php7-cgi
-php7-sysvshm
-php7-pgsql
-php7-tidy
-php7-pdo_pgsql
-php7-phar
-php7-mysqlnd
+php81-common
+php81-pdo_sqlite
+php81-pear
+php81-ftp
+php81-imap
+php81-mysqli
+php81-json
+php81-mbstring
+php81-soap
+php81-litespeed
+php81-sockets
+php81-bcmath
+php81-opcache
+php81-dom
+php81-zlib
+php81-gettext
+php81-fpm
+php81-intl
+php81-openssl
+php81-session
+php81-mcrypt
+php81-pdo_mysql
+php81-embed
+php81-xmlrpc
+php81-wddx
+php81-dba
+php81-ldap
+php81-xsl
+php81-exif
+php81-pdo_dblib
+php81-bz2
+php81-pdo
+php81-pspell
+php81-sysvmsg
+php81-gmp
+php81-apache2
+php81-pdo_odbc
+php81-shmop
+php81-ctype
+php81-phpdbg
+php81-enchant
+php81-sysvsem
+php81-sqlite3
+php81-odbc
+php81-pcntl
+php81-calendar
+php81-xmlreader
+php81-snmp
+php81-zip
+php81-posix
+php81-iconv
+php81-curl
+php81-doc
+php81-gd
+php81-xml
+php81-dev
+php81-cgi
+php81-sysvshm
+php81-pgsql
+php81-tidy
+php81-pdo_pgsql
+php81-phar
+php81-mysqlnd
 ```
 
 ## Docker Compose example:
@@ -228,16 +253,44 @@ grav:
   restart: always
 ```
 
-## Source Repository
+## 🔍 Image contents & Vulnerability analysis
 
-* [Bitbucket - yobasystems/alpine-grav](https://bitbucket.org/yobasystems/alpine-grav/)
+| PACKAGE NAME          | PACKAGE VERSION | VULNERABILITIES |
+|-----------------------|-----------------|-----------------|
+
+
+## 📚 Source Repositories
 
 * [Github - yobasystems/alpine-grav](https://github.com/yobasystems/alpine-grav)
 
-## Links
+* [Gitlab - yobasystems/alpine-grav](https://gitlab.com/yobasystems/alpine-grav)
+
+* [Bitbucket - yobasystems/alpine-grav](https://bitbucket.org/yobasystems/alpine-grav/)
+
+
+## 🐳 Container Registries
+
+* [Dockerhub - yobasystems/alpine-grav](https://hub.docker.com/r/yobasystems/alpine-grav/)
+
+* [Quay.io - yobasystems/alpine-grav](https://quay.io/repository/yobasystems/alpine-grav)
+
+
+## 🔗 Links
 
 * [Yoba Systems](https://www.yobasystems.co.uk/)
 
-* [Dockerhub - yobasystems](https://hub.docker.com/u/yobasystems/)
+* [Github - Yoba Systems](https://github.com/yobasystems/)
 
-* [Quay.io - yobasystems](https://quay.io/organization/yobasystems)
+* [Dockerhub - Yoba Systems](https://hub.docker.com/u/yobasystems/)
+
+* [Quay.io - Yoba Systems](https://quay.io/organization/yobasystems)
+
+* [Maintainer - Dominic Taylor](https://github.com/dominictayloruk)
+
+## 💰 Donation
+
+[![BMAC](https://img.shields.io/badge/BUY%20ME%20A%20COFFEE-£5-blue.svg?style=for-the-badge&logo=buy-me-a-coffee)](https://www.buymeacoffee.com/dominictayloruk?new=1)
+
+[![BITCOIN](https://img.shields.io/badge/BTC-bc1q7hy8qmyvq7rw6slrna7yffcdnj9rcg4e9xjecc-blue.svg?style=for-the-badge&logo=bitcoin)](bitcoin:bc1q7hy8qmyvq7rw6slrna7yffcdnj9rcg4e9xjecc)
+
+[![ETHEREUM](https://img.shields.io/badge/ETH-0xb6bE2e4da3d86b50Bdae1F9B6960c23dd87C532C-blue.svg?style=for-the-badge&logo=ethereum)](ethereum:0xb6bE2e4da3d86b50Bdae1F9B6960c23dd87C532C)

@@ -10,7 +10,7 @@ else
 fi
 
 if [ ! -d /usr/html/system ] ; then
-  curl -fLk -o /tmp/grav.zip  "https://getgrav.org/download/skeletons/onepage-site/1.0.2"
+  curl -fLk -o /tmp/grav.zip  "https://getgrav.org/download/skeletons/onepage-site/2.0.0"
   mkdir /tmp/grav-src
   unzip /tmp/grav.zip -d /tmp/grav-src
   mv -f /tmp/grav-src/grav-skeleton-onepage-site/* /usr/html/
