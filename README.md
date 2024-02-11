@@ -4,13 +4,13 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/yobasystems/alpine-grav.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/r/yobasystems/alpine-grav/)
 [![Docker Stars](https://img.shields.io/docker/stars/yobasystems/alpine-grav.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/r/yobasystems/alpine-grav/)
 
-[![Alpine Version](https://img.shields.io/badge/Alpine%20version-v3.19.0-green.svg?style=for-the-badge)](https://alpinelinux.org/)
+[![Alpine Version](https://img.shields.io/badge/Alpine%20version-v3.19.1-green.svg?style=for-the-badge)](https://alpinelinux.org/)
 [![Grav Version](https://img.shields.io/badge/grav%20version-v1.7.44-green.svg?style=for-the-badge)](https://getgrav.org/)
 
 
 This container image [(yobasystems/alpine-grav)](https://hub.docker.com/r/yobasystems/alpine-grav/) is based on the minimal [Alpine Linux](https://alpinelinux.org/) ready for running [Grav](https://getgrav.org/) (Flat file CMS)
 
-### Alpine Version 3.19.0 (Released 2023-12-07)
+### Alpine Version 3.19.1 (Released 2023-01-26)
 ##### Grav Version 1.7.44
 
 ----
