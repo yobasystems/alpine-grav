@@ -194,7 +194,7 @@ php81-fpm
 php81-intl
 php81-openssl
 php81-session
-php81-mcrypt
+php81-pecl-mcrypt
 php81-pdo_mysql
 php81-embed
 php81-xmlrpc

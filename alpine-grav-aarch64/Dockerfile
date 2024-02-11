@@ -24,7 +24,7 @@ ENV TERM="xterm" \
 
 RUN apk add --no-cache bash ca-certificates curl git less musl nginx tzdata vim yaml zip \
     php81-fpm php81-json php81-zlib php81-xml php81-pdo php81-phar php81-openssl \
-    php81-gd php81-iconv php81-mcrypt php81-session php81-zip \
+    php81-gd php81-iconv php81-pecl-mcrypt php81-session php81-zip \
     php81-curl php81-opcache php81-ctype php81-apcu \
     php81-intl php81-bcmath php81-dom php81-mbstring php81-simplexml php81-xmlreader && \
     rm -rf /var/cache/apk/*
