@@ -5,14 +5,14 @@ ARG VCS_REF
 
 LABEL maintainer="Dominic Taylor <dominic@yoba.systems>" \
     architecture="arm64v8/aarch64" \
-    grav-version="1.7.44" \
+    grav-version="1.7.45" \
     alpine-version="3.19.1" \
-    build="11-Feb-2024" \
+    build="13-Apr-2024" \
     org.opencontainers.image.title="alpine-grav" \
     org.opencontainers.image.description="Grav container image running on Alpine Linux" \
     org.opencontainers.image.authors="Dominic Taylor <dominic@yoba.systems>" \
     org.opencontainers.image.vendor="Yoba Systems" \
-    org.opencontainers.image.version="1.7.44" \
+    org.opencontainers.image.version="1.7.45" \
     org.opencontainers.image.url="https://hub.docker.com/r/yobasystems/alpine-grav/" \
     org.opencontainers.image.source="https://github.com/yobasystems/alpine-grav" \
     org.opencontainers.image.base.name="docker.io/yobasystems/alpine:3.19.1" \
@@ -20,7 +20,7 @@ LABEL maintainer="Dominic Taylor <dominic@yoba.systems>" \
     org.opencontainers.image.created=$BUILD_DATE
 
 ENV TERM="xterm" \
-    GRAV_VERSION="1.7.44"
+    GRAV_VERSION="1.7.45"
 
 RUN apk add --no-cache bash ca-certificates curl git less musl nginx tzdata vim yaml zip \
     php81-fpm php81-json php81-zlib php81-xml php81-pdo php81-phar php81-openssl \
