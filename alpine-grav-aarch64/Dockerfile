@@ -1,26 +1,26 @@
-FROM yobasystems/alpine:3.22.0-aarch64
+FROM yobasystems/alpine:3.22.1-aarch64
 
 ARG BUILD_DATE
 ARG VCS_REF
 
 LABEL maintainer="Dominic Taylor <dominic@yoba.systems>" \
     architecture="arm64v8/aarch64" \
-    grav-version="1.7.48" \
-    alpine-version="3.22.0" \
-    build="21-Jun-2025" \
+    grav-version="1.7.49" \
+    alpine-version="3.22.1" \
+    build="04-Oct-2025" \
     org.opencontainers.image.title="alpine-grav" \
     org.opencontainers.image.description="Grav container image running on Alpine Linux" \
     org.opencontainers.image.authors="Dominic Taylor <dominic@yoba.systems>" \
     org.opencontainers.image.vendor="Yoba Systems" \
-    org.opencontainers.image.version="1.7.48" \
+    org.opencontainers.image.version="1.7.49" \
     org.opencontainers.image.url="https://hub.docker.com/r/yobasystems/alpine-grav/" \
     org.opencontainers.image.source="https://github.com/yobasystems/alpine-grav" \
-    org.opencontainers.image.base.name="docker.io/yobasystems/alpine:3.22.0" \
+    org.opencontainers.image.base.name="docker.io/yobasystems/alpine:3.22.1" \
     org.opencontainers.image.revision=$VCS_REF \
     org.opencontainers.image.created=$BUILD_DATE
 
 ENV TERM="xterm" \
-    GRAV_VERSION="1.7.48"
+    GRAV_VERSION="1.7.49"
 
 RUN apk add --no-cache bash ca-certificates curl git less musl nginx tzdata vim yaml zip \
     php84-fpm php84-json php84-zlib php84-xml php84-pdo php84-phar php84-openssl \

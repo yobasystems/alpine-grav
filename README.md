@@ -4,14 +4,14 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/yobasystems/alpine-grav.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/r/yobasystems/alpine-grav/)
 [![Docker Stars](https://img.shields.io/docker/stars/yobasystems/alpine-grav.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/r/yobasystems/alpine-grav/)
 
-[![Alpine Version](https://img.shields.io/badge/Alpine%20version-v3.22.0-green.svg?style=for-the-badge)](https://alpinelinux.org/)
-[![Grav Version](https://img.shields.io/badge/grav%20version-v1.7.48-green.svg?style=for-the-badge)](https://getgrav.org/)
+[![Alpine Version](https://img.shields.io/badge/Alpine%20version-v3.22.1-green.svg?style=for-the-badge)](https://alpinelinux.org/)
+[![Grav Version](https://img.shields.io/badge/grav%20version-v1.7.49-green.svg?style=for-the-badge)](https://getgrav.org/)
 
 
 This container image [(yobasystems/alpine-grav)](https://hub.docker.com/r/yobasystems/alpine-grav/) is based on the minimal [Alpine Linux](https://alpinelinux.org/) ready for running [Grav](https://getgrav.org/) (Flat file CMS)
 
-### Alpine Version 3.22.0 (Released 2025-05-30)
-##### Grav Version 1.7.48
+### Alpine Version 3.22.1 (Released 2025-07-15)
+##### Grav Version 1.7.49
 
 ----
 
@@ -60,15 +60,12 @@ Alpine Linux is a Linux distribution built around musl libc and BusyBox. The ima
 ## 📏 Layers & Sizes
 
 ![Version](https://img.shields.io/badge/version-amd64-blue.svg?style=for-the-badge)
-![MicroBadger Layers (tag)](https://img.shields.io/docker/layers/yobasystems/alpine-grav/amd64.svg?style=for-the-badge)
 ![MicroBadger Size (tag)](https://img.shields.io/docker/image-size/yobasystems/alpine-grav/amd64.svg?style=for-the-badge)
 
 ![Version](https://img.shields.io/badge/version-aarch64-blue.svg?style=for-the-badge)
-![MicroBadger Layers (tag)](https://img.shields.io/docker/layers/yobasystems/alpine-grav/aarch64.svg?style=for-the-badge)
 ![MicroBadger Size (tag)](https://img.shields.io/docker/image-size/yobasystems/alpine-grav/aarch64.svg?style=for-the-badge)
 
 ![Version](https://img.shields.io/badge/version-armhf-blue.svg?style=for-the-badge)
-![MicroBadger Layers (tag)](https://img.shields.io/docker/layers/yobasystems/alpine-grav/armhf.svg?style=for-the-badge)
 ![MicroBadger Size (tag)](https://img.shields.io/docker/image-size/yobasystems/alpine-grav/armhf.svg?style=for-the-badge)
 
 ## 🚀 How to use this image
@@ -263,7 +260,6 @@ grav:
 
 * [Github - yobasystems/alpine-grav](https://github.com/yobasystems/alpine-grav)
 * [Gitlab - yobasystems/alpine-grav](https://gitlab.com/yobasystems/alpine-grav)
-* [Bitbucket - yobasystems/alpine-grav](https://bitbucket.org/yobasystems/alpine-grav/)
 
 
 ## 🐳 Container Registries
