@@ -28,7 +28,7 @@ find /usr/html -type d | xargs chmod +s
 
 # start php-fpm
 mkdir -p /usr/logs/php-fpm
-php-fpm7
+php-fpm84
 
 # start nginx
 mkdir -p /usr/logs/nginx
