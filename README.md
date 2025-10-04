@@ -5,13 +5,13 @@
 [![Docker Stars](https://img.shields.io/docker/stars/yobasystems/alpine-grav.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/r/yobasystems/alpine-grav/)
 
 [![Alpine Version](https://img.shields.io/badge/Alpine%20version-v3.22.1-green.svg?style=for-the-badge)](https://alpinelinux.org/)
-[![Grav Version](https://img.shields.io/badge/grav%20version-v1.7.49-green.svg?style=for-the-badge)](https://getgrav.org/)
+[![Grav Version](https://img.shields.io/badge/grav%20version-v1.7.49.5-green.svg?style=for-the-badge)](https://getgrav.org/)
 
 
 This container image [(yobasystems/alpine-grav)](https://hub.docker.com/r/yobasystems/alpine-grav/) is based on the minimal [Alpine Linux](https://alpinelinux.org/) ready for running [Grav](https://getgrav.org/) (Flat file CMS)
 
 ### Alpine Version 3.22.1 (Released 2025-07-15)
-##### Grav Version 1.7.49
+##### Grav Version 1.7.49.5
 
 ----
 
@@ -191,7 +191,6 @@ php84-fpm
 php84-intl
 php84-openssl
 php84-session
-php84-pecl-mcrypt
 php84-pdo_mysql
 php84-embed
 php84-xmlrpc
