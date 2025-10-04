@@ -24,7 +24,7 @@ ENV TERM="xterm" \
 
 RUN apk add --no-cache bash ca-certificates curl git less musl nginx tzdata vim yaml zip \
     php84-fpm php84-json php84-zlib php84-xml php84-pdo php84-phar php84-openssl \
-    php84-gd php84-iconv php84-pecl-mcrypt php84-session php84-zip \
+    php84-gd php84-iconv php84-session php84-zip \
     php84-curl php84-opcache php84-ctype php84-apcu \
     php84-intl php84-bcmath php84-dom php84-mbstring php84-simplexml php84-xmlreader && \
     rm -rf /var/cache/apk/*
@@ -42,5 +42,5 @@ RUN chmod +x /run.sh
 
 
 EXPOSE 80
-VOLUME ["/usr"]
+# VOLUME ["/usr"]
 CMD ["/run.sh"]
