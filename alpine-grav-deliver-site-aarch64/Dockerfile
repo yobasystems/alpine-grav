@@ -1,4 +1,4 @@
-FROM yobasystems/alpine:3.22.2-aarch64
+FROM yobasystems/alpine:3.23.0-aarch64
 
 ARG BUILD_DATE
 ARG VCS_REF
@@ -6,8 +6,8 @@ ARG VCS_REF
 LABEL maintainer="Dominic Taylor <dominic@yoba.systems>" \
     architecture="arm64v8/aarch64" \
     grav-version="1.7.49.5" \
-    alpine-version="3.22.2" \
-    build="30-Nov-2025" \
+    alpine-version="3.23.0" \
+    build="04-Dec-2025" \
     org.opencontainers.image.title="alpine-grav" \
     org.opencontainers.image.description="Grav container image running on Alpine Linux" \
     org.opencontainers.image.authors="Dominic Taylor <dominic@yoba.systems>" \
@@ -15,7 +15,7 @@ LABEL maintainer="Dominic Taylor <dominic@yoba.systems>" \
     org.opencontainers.image.version="1.7.49.5" \
     org.opencontainers.image.url="https://hub.docker.com/r/yobasystems/alpine-grav/" \
     org.opencontainers.image.source="https://github.com/yobasystems/alpine-grav" \
-    org.opencontainers.image.base.name="docker.io/yobasystems/alpine:3.22.1" \
+    org.opencontainers.image.base.name="docker.io/yobasystems/alpine:3.23.0" \
     org.opencontainers.image.revision=$VCS_REF \
     org.opencontainers.image.created=$BUILD_DATE
 

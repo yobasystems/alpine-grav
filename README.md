@@ -4,16 +4,16 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/yobasystems/alpine-grav.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/r/yobasystems/alpine-grav/)
 [![Docker Stars](https://img.shields.io/docker/stars/yobasystems/alpine-grav.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/r/yobasystems/alpine-grav/)
 
-[![Alpine Version](https://img.shields.io/badge/Alpine%20version-v3.22.2-green.svg?style=for-the-badge)](https://alpinelinux.org/)
+[![Alpine Version](https://img.shields.io/badge/Alpine%20version-v3.23.0-green.svg?style=for-the-badge)](https://alpinelinux.org/)
 [![Grav Version](https://img.shields.io/badge/grav%20version-v1.7.49.5-green.svg?style=for-the-badge)](https://getgrav.org/)
-
 
 This container image [(yobasystems/alpine-grav)](https://hub.docker.com/r/yobasystems/alpine-grav/) is based on the minimal [Alpine Linux](https://alpinelinux.org/) ready for running [Grav](https://getgrav.org/) (Flat file CMS)
 
-### Alpine Version 3.22.2 (Released 2025-10-08)
+### Alpine Version 3.23.0 (Released 2025-12-03)
+
 ##### Grav Version 1.7.49.5
 
-----
+---
 
 ## Table of Contents
 
@@ -29,33 +29,30 @@ This container image [(yobasystems/alpine-grav)](https://hub.docker.com/r/yobasy
 - [Links](#links)
 - [Donation](#donation)
 
-
 ## 🏔️ What is Alpine Linux?
+
 Alpine Linux is a Linux distribution built around musl libc and BusyBox. The image is only 5 MB in size and has access to a package repository that is much more complete than other BusyBox based images. This makes Alpine Linux a great image base for utilities and even production applications. Read more about Alpine Linux here and you can see how their mantra fits in right at home with container images.
 
 ## ✨ Features
 
-* Minimal size only, minimal layers
-* Memory usage is minimal on a simple install.
-
+- Minimal size only, minimal layers
+- Memory usage is minimal on a simple install.
 
 ## 🏗️ Architectures
 
-* ```:amd64```, ```:x86_64``` - 64 bit Intel/AMD (x86_64/amd64)
-* ```:arm64v8```, ```:aarch64``` - 64 bit ARM (ARMv8/aarch64)
-* ```:arm32v7```, ```:armhf``` - 32 bit ARM (ARMv7/armhf)
-
-#### 📝 PLEASE CHECK TAGS BELOW FOR SUPPORTED ARCHITECTURES, THE ABOVE IS A LIST OF EXPLANATION
+- `:amd64`, `:x86_64` - 64 bit Intel/AMD (x86_64/amd64)
+- `:arm64v8`, `:aarch64` - 64 bit ARM (ARMv8/aarch64)
+- `:arm32v7`, `:armhf` - 32 bit ARM (ARMv7/armhf)
 
 ## 🏷️ Tags
 
-* ```:latest``` latest branch based (Automatic Architecture Selection)
-* ```:master``` master branch usually inline with latest
-* ```:deliver-site``` deliver-site branch based (Automatic Architecture Selection)
-* ```:one-page``` one-page branch based (Automatic Architecture Selection)
-* ```:amd64```, ```:x86_64```  amd64 based on latest tag but amd64 architecture
-* ```:aarch64```, ```:arm64v8``` Armv8 based on latest tag but arm64 architecture
-* ```:armhf```, ```:arm32v7``` Armv7 based on latest tag but arm32 architecture
+- `:latest` latest branch based (Automatic Architecture Selection)
+- `:main` main branch usually inline with latest
+- `:deliver-site` deliver-site branch based (Automatic Architecture Selection)
+- `:one-page` one-page branch based (Automatic Architecture Selection)
+- `:amd64`, `:x86_64` amd64 based on latest tag but amd64 architecture
+- `:aarch64`, `:arm64v8` Armv8 based on latest tag but arm64 architecture
+- `:armhf`, `:arm32v7` Armv7 based on latest tag but arm32 architecture
 
 ## 📏 Layers & Sizes
 
@@ -69,6 +66,7 @@ Alpine Linux is a Linux distribution built around musl libc and BusyBox. The ima
 ![MicroBadger Size (tag)](https://img.shields.io/docker/image-size/yobasystems/alpine-grav/armhf.svg?style=for-the-badge)
 
 ## 🚀 How to use this image
+
 ## Environment Variables:
 
 ## Creating an instance
@@ -116,7 +114,6 @@ chown -R 100:101 /data/yobasystems/html
 
 The container image will auto create the folder and populate with files if it doesn't exist. Make sure to mount /data/{domain}/html with your Backup files.
 
-
 The following user and group id are used, the files should be set to this:
 User ID:
 Group ID:
@@ -125,11 +122,9 @@ Group ID:
 chown -R 100:101 /data/{domain}/html
 ```
 
-
 ### Volume structure
 
-* `/usr/html`: Webroot
-
+- `/usr/html`: Webroot
 
 ### GRAV CLI GPM
 
@@ -148,6 +143,7 @@ bin/gpm list
 The upload limit is 128 Megabytes.
 
 ### Change php.ini value
+
 modify files/php-fpm.conf
 
 To modify php.ini variable, simply edit php-fpm.ini and add php_flag[variable] = value.
@@ -157,12 +153,16 @@ php_flag[display_errors] = on
 ```
 
 ### PHP Modules
+
 #### List of available modules in Alpine Linux, not all these are installed.
+
 ##### In order to install a php module do, (leave out the version number i.e. -8.1.01-r0
+
 ```bash
 docker exec <image_id> apk add <pkg_name>
 docker restart <image_name>
 ```
+
 Example:
 
 ```bash
@@ -237,7 +237,7 @@ php84-mysqlnd
 
 ## Docker Compose example:
 
-```yalm
+```yaml
 grav:
   image: yobasystems/alpine-grav:latest
   environment:
@@ -251,27 +251,23 @@ grav:
 
 ## 🔍 Image contents & Vulnerability analysis
 
-| PACKAGE NAME          | PACKAGE VERSION | VULNERABILITIES |
-|-----------------------|-----------------|-----------------|
-
+| PACKAGE NAME | PACKAGE VERSION | VULNERABILITIES |
+| ------------ | --------------- | --------------- |
 
 ## 📚 Source Repositories
 
-* [Github - yobasystems/alpine-grav](https://github.com/yobasystems/alpine-grav)
-* [Gitlab - yobasystems/alpine-grav](https://gitlab.com/yobasystems/alpine-grav)
-
+- [Github - yobasystems/alpine-grav](https://github.com/yobasystems/alpine-grav)
+- [Gitlab - yobasystems/alpine-grav](https://gitlab.com/yobasystems/alpine-grav)
 
 ## 🐳 Container Registries
 
-* [Dockerhub - yobasystems/alpine-grav](https://hub.docker.com/r/yobasystems/alpine-grav/)
-* [Quay.io - yobasystems/alpine-grav](https://quay.io/repository/yobasystems/alpine-grav)
-
+- [Dockerhub - yobasystems/alpine-grav](https://hub.docker.com/r/yobasystems/alpine-grav/)
+- [Quay.io - yobasystems/alpine-grav](https://quay.io/repository/yobasystems/alpine-grav)
 
 ## 🔗 Links
 
-* [Yoba Systems](https://www.yobasystems.co.uk/)
-* [Github - Yoba Systems](https://github.com/yobasystems/)
-* [Dockerhub - Yoba Systems](https://hub.docker.com/u/yobasystems/)
-* [Quay.io - Yoba Systems](https://quay.io/organization/yobasystems)
-* [Maintainer - Dominic Taylor](https://github.com/dominictayloruk)
-
+- [Yoba Systems](https://www.yobasystems.co.uk/)
+- [Github - Yoba Systems](https://github.com/yobasystems/)
+- [Dockerhub - Yoba Systems](https://hub.docker.com/u/yobasystems/)
+- [Quay.io - Yoba Systems](https://quay.io/organization/yobasystems)
+- [Maintainer - Dominic Taylor](https://github.com/dominictayloruk)
