@@ -82,7 +82,7 @@ E.G
 ```bash
 mkdir -p /data/yobasystems/html
 
-docker run -e VIRTUAL_HOST=www.yobasystems.co.uk -v /data/yobasystems/html:/usr/html -p 80:80 yobasystems/alpine-grav
+docker run -e VIRTUAL_HOST=yoba.systems -v /data/yobasystems/html:/usr/html -p 80:80 yobasystems/alpine-grav
 ```
 
 Make sure you create the folder on the host before starting the container and obtain the correct permissions.
@@ -91,13 +91,13 @@ Make sure you create the folder on the host before starting the container and ob
 
 mkdir -p /data/{domain}/html
 
-docker run -e VIRTUAL_HOST={domain}.com,www.{domain}.com -v /data/{domain}/html:/usr/html -p 80:80 yobasystems/alpine-grav
+docker run -e VIRTUAL_HOST={domain}.com,www.{domain}.com -v /data/{domain}/html:/usr/html -p 80:80 yobasystems/alpine-grav:latest
 
 E.G
 
-mkdir -p /data/yobasystems/html
+mkdir -p /data/example-com/html
 
-docker run -e VIRTUAL_HOST=www.yobasystems.co.uk -v /data/yobasystems/html:/usr/html -p 80:80 yobasystems/alpine-grav
+docker run -e VIRTUAL_HOST=example.com -v /data/example-com/html:/usr/html -p 80:80 yobasystems/alpine-grav:latest
 ```
 
 The following user and group id are used, the files should be set to this:
@@ -109,7 +109,7 @@ chown -R 100:101 /data/{domain}/html
 
 E.G
 
-chown -R 100:101 /data/yobasystems/html
+chown -R 100:101 /data/example-com/html
 ```
 
 The container image will auto create the folder and populate with files if it doesn't exist. Make sure to mount /data/{domain}/html with your Backup files.
@@ -241,11 +241,11 @@ php84-mysqlnd
 grav:
   image: yobasystems/alpine-grav:latest
   environment:
-    VIRTUAL_HOST: www.example.co.uk
+    VIRTUAL_HOST: example.com
   expose:
     - "80"
   volumes:
-    - /data/example/www:/usr/html
+    - /data/example-com/www:/usr/html
   restart: always
 ```
 
@@ -266,7 +266,7 @@ grav:
 
 ## 🔗 Links
 
-- [Yoba Systems](https://www.yobasystems.co.uk/)
+- [Yoba Systems](https://yoba.systems/)
 - [Github - Yoba Systems](https://github.com/yobasystems/)
 - [Dockerhub - Yoba Systems](https://hub.docker.com/u/yobasystems/)
 - [Quay.io - Yoba Systems](https://quay.io/organization/yobasystems)
