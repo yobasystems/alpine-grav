@@ -27,7 +27,6 @@ This container image [(yobasystems/alpine-grav)](https://hub.docker.com/r/yobasy
 - [Source Repositories](#source-repositories)
 - [Container Registries](#container-registries)
 - [Links](#links)
-- [Donation](#donation)
 
 ## 🏔️ What is Alpine Linux?
 
@@ -67,22 +66,24 @@ Alpine Linux is a Linux distribution built around musl libc and BusyBox. The ima
 
 ## 🚀 How to use this image
 
-## Environment Variables:
+## Environment Variables
+
+- VIRTUAL_HOST
 
 ## Creating an instance
 
 ```bash
 mkdir -p /data/{domain}/html
 
-docker run -e VIRTUAL_HOST={domain}.com,www.{domain}.com -v /data/{domain}/html:/usr/html -p 80:80 yobasystems/alpine-grav
+docker run -e VIRTUAL_HOST={domain}.com,www.{domain}.com -v /data/{domain}/html:/usr/html -p 80:80 yobasystems/alpine-grav:latest
 ```
 
 E.G
 
 ```bash
-mkdir -p /data/yobasystems/html
+mkdir -p /data/example-com/html
 
-docker run -e VIRTUAL_HOST=yoba.systems -v /data/yobasystems/html:/usr/html -p 80:80 yobasystems/alpine-grav
+docker run -e VIRTUAL_HOST=example.com -v /data/example-com/html:/usr/html -p 80:80 yobasystems/alpine-grav:latest
 ```
 
 Make sure you create the folder on the host before starting the container and obtain the correct permissions.
@@ -101,26 +102,18 @@ docker run -e VIRTUAL_HOST=example.com -v /data/example-com/html:/usr/html -p 80
 ```
 
 The following user and group id are used, the files should be set to this:
-User ID:
-Group ID:
+User ID: 101
+Group ID: 100
 
 ```bash
 chown -R 100:101 /data/{domain}/html
-
-E.G
-
+```
+OR
+```bash
 chown -R 100:101 /data/example-com/html
 ```
 
 The container image will auto create the folder and populate with files if it doesn't exist. Make sure to mount /data/{domain}/html with your Backup files.
-
-The following user and group id are used, the files should be set to this:
-User ID:
-Group ID:
-
-```bash
-chown -R 100:101 /data/{domain}/html
-```
 
 ### Volume structure
 
@@ -156,7 +149,7 @@ php_flag[display_errors] = on
 
 #### List of available modules in Alpine Linux, not all these are installed.
 
-##### In order to install a php module do, (leave out the version number i.e. -8.1.01-r0
+##### In order to install a php module do; (leave out the version number i.e. -8.1.01-r0)
 
 ```bash
 docker exec <image_id> apk add <pkg_name>
