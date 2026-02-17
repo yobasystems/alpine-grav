@@ -1,0 +1,11 @@
+services:
+  grav:
+    image: grav:latest
+    ports:
+      - "127.0.0.1:8080:80"
+    volumes:
+      - grav:/usr/html
+    environment: # Add this section to define environment variables
+      - VIRTUAL_HOST=grav.munn.me
+volumes:
+  grav:

@@ -42,5 +42,5 @@ RUN chmod +x /run.sh
 
 
 EXPOSE 80
-VOLUME ["/usr"]
+# VOLUME ["/usr"]
 CMD ["/run.sh"]
